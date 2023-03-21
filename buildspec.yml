@@ -1,0 +1,38 @@
+version: 0.2
+
+phases:
+
+ install:
+   runtime-versions:
+     nodejs: 16
+ pre_build:
+   commands:
+     - echo Installing NPM Dependencies
+     - npm install
+ build:
+   commands:
+     - echo Build started on `date`
+
+
+     - npm run build
+
+
+ post_build:
+
+
+   commands:
+
+
+     # - aws s3 cp --recursive ./build s3://bucket010997/
+
+
+     # - aws cloudfront create-invalidation --distribution-id EOZ189CO7YMZ3 --path /\*
+
+
+artifacts:
+
+
+ files:
+   - "*/"
+
+ base-directory: "build"

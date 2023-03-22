@@ -23,10 +23,10 @@ phases:
    commands:
 
 
-     # - aws s3 cp --recursive ./build s3://bucket010997/
+     - aws s3 cp --recursive ./build s3://shahidpipeline/
 
 
-     # - aws cloudfront create-invalidation --distribution-id EOZ189CO7YMZ3 --path /\*
+      # - aws cloudfront create-invalidation --distribution-id EOZ189CO7YMZ3 --path /\*
 
 
 artifacts:
